@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Digital Portfolio — [Your Name]</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Interactive Digital Portfolio built with HTML, CSS and JavaScript." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">[YourName]</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="hamburger"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" data-visible="false">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Hi, I'm <span class="accent">[Your Name]</span></h1>
+          <p class="lead">Front-end developer (Intern) — I build responsive, accessible, and delightful interfaces.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn btn-outline" href="#contact">Contact Me</a>
+          </div>
+          <ul class="social">
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" aria-label="Twitter">Twitter</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <div class="avatar-card" aria-hidden="false">
+            <!-- replace src with your image -->
+           <img src="assets/profile.jpg" alt="Your Profile Photo" />
+            <div class="card-info">
+              <h3>[Your Name]</h3>
+              <p>Front-end Intern</p>
+              <div class="small-stats">
+                <div><strong>4</strong> Courses</div>
+                <div><strong>8+</strong> Projects</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I’m currently attending a Front End Web Development internship. I enjoy converting UI designs into fast, accessible web pages. I’ve worked with HTML, CSS, JavaScript and enjoy learning modern libraries & tooling.</p>
+
+        <div class="about-grid">
+          <div>
+            <h3>What I do</h3>
+            <ul>
+              <li>Responsive UI development</li>
+              <li>Interactive components with plain JS</li>
+              <li>Accessibility and performance focus</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Quick Facts</h3>
+            <ul>
+              <li>Available for internships</li>
+              <li>Location: [Your City]</li>
+              <li>Language: English, [Other]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skill-list">
+          <div class="skill">
+            <div class="skill-header"><span>HTML</span><span>95%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-fill="95"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>CSS</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-fill="90"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>JavaScript</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-fill="80"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>Responsive Design</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-fill="88"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="ui">UI</button>
+          <button class="filter-btn" data-filter="games">Games</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project cards -->
+          <article class="project-card" data-type="web" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=60&auto=format&fit=crop" alt="E-Commerce Showcase" />
+            <div class="project-body">
+              <h3>E-Commerce Product Showcase</h3>
+              <p>Simple product gallery with filters and modal detail view.</p>
+              <div class="project-actions">
+                <button class="open-project" data-title="E-Commerce Product Showcase" data-desc="A clean responsive gallery with filtering, modal views and product details. Built with vanilla JS.">View</button>
+                <a class="btn-link" href="#" target="_blank" rel="noopener">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-type="ui" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=800&q=60&auto=format&fit=crop" alt="Portfolio UI" />
+            <div class="project-body">
+              <h3>Interactive Portfolio</h3>
+              <p>Modern portfolio template with smooth animations and responsive layout.</p>
+              <div class="project-actions">
+                <button class="open-project" data-title="Interactive Portfolio" data-desc="A single-page portfolio with animations, accessible modal and responsive layout.">View</button>
+                <a class="btn-link" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-type="web" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1505682634904-d7c0f2c98c69?w=800&q=60&auto=format&fit=crop" alt="Quiz App" />
+            <div class="project-body">
+              <h3>Online Quiz App</h3>
+              <p>Timed multiple-choice quiz with scoring and local storage.</p>
+              <div class="project-actions">
+                <button class="open-project" data-title="Online Quiz App" data-desc="Quiz app with timer, scoring and instant feedback.">View</button>
+                <a class="btn-link" href="#" target="_blank" rel="noopener">Try</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- You can duplicate cards to add more projects -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Timeline -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li>
+            <h4>Front-end Web Dev Intern</h4>
+            <p><strong>ABC Academy</strong> — June 2025 to Present</p>
+            <p>Working on building front-end components and projects for the internship.</p>
+          </li>
+          <li>
+            <h4>Personal Projects</h4>
+            <p>Built multiple small apps — quiz app, todo manager, portfolio templates.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form" novalidate>
+            <label>
+              <span>Your name</span>
+              <input type="text" name="name" id="name" required />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" id="email" required />
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" id="message" rows="6" required></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">Send Message</button>
+              <button type="button" id="save-local" class="btn btn-outline">Save Locally</button>
+            </div>
+            <p id="contact-feedback" class="feedback" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info">
+            <h3>Get in touch</h3>
+            <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+            <p>Phone: +91-XXXXXXXXXX</p>
+            <p>Or connect on LinkedIn / GitHub.</p>
+            <a class="btn" href="resume.pdf" download>Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> [Your Name]. Built with ❤️ — Frontend Intern Project.</p>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <div class="modal-actions">
+        <a class="btn" href="#" target="_blank">View Live</a>
+        <button class="btn btn-outline modal-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
